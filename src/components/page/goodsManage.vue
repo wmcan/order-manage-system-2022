@@ -45,8 +45,9 @@
                 </el-table-column>
 
                 <!-- <el-table-column prop="date" label="注册时间"></el-table-column> -->
-                <el-table-column label="操作" width="180" align="center">
+                <el-table-column label="操作" width="220" align="center">
                     <template slot-scope="scope">
+                        <el-button type="text" icon="el-icon-edit" @click="orderDetail(scope.$index, scope.row)">订单详情</el-button>
                         <el-button type="text" icon="el-icon-edit" @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
                         <el-button type="text" icon="el-icon-delete" class="red" @click="handleDelete(scope.$index, scope.row)"
                             >删除</el-button
@@ -65,14 +66,17 @@
                 ></el-pagination>
             </div>
         </div>
-
+        <!-- 查看商品相关的订单明细弹出框 -->
+        <el-dialog title="订单明细" :visible.sync="orderVisible">
+            <order-table></order-table>
+        </el-dialog>
         <!-- 编辑弹出框 -->
         <el-dialog title="编辑" :visible.sync="editVisible" width="30%">
             <el-form ref="form" :model="form" label-width="70px">
-                <el-form-item label="用户名">
+                <el-form-item label="商品名">
                     <el-input v-model="form.name"></el-input>
                 </el-form-item>
-                <el-form-item label="地址">
+                <el-form-item label="商品价格">
                     <el-input v-model="form.address"></el-input>
                 </el-form-item>
             </el-form>
@@ -86,8 +90,12 @@
 
 <script>
 import { fetchData } from '../../api/index';
+import OrderTable from '../common/orderTable.vue';
 export default {
-    name: 'basetable',
+    name: 'goodsManage',
+    components: {
+        OrderTable
+    },
     data() {
         return {
             query: {
@@ -99,6 +107,7 @@ export default {
             tableData: [],
             multipleSelection: [],
             delList: [],
+            orderVisible: false,
             editVisible: false,
             pageTotal: 0,
             form: {},
@@ -122,6 +131,10 @@ export default {
         handleSearch() {
             this.$set(this.query, 'pageIndex', 1);
             this.getData();
+        },
+        // 查看订单详情
+        orderDetail(index, row) {
+            this.orderVisible = true;
         },
         // 删除操作
         handleDelete(index, row) {

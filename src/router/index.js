@@ -20,6 +20,16 @@ export default new Router({
                     meta: { title: '系统首页' }
                 },
                 {
+                    path: '/goodsManage',
+                    component: () => import(/* webpackChunkName: "goodsManage" */ '../components/page/goodsManage.vue'),
+                    meta: { title: '商品管理' }
+                },
+                {
+                    path: '/orderManage',
+                    component: () => import(/* webpackChunkName: "goodsManage" */ '../components/page/orderManage.vue'),
+                    meta: { title: '订单管理管理' }
+                },
+                {
                     path: '/icon',
                     component: () => import(/* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
                     meta: { title: '自定义图标' }
