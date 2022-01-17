@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import { fetchData } from '../../api/index';
 import OrderTable from '../common/orderTable.vue';
 export default {
     name: 'orderManage',
