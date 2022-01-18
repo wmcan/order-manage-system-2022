@@ -2,16 +2,13 @@
     <div class="m-nav">
         <ul class="nav">
             <li class="list my">
-                <router-link :to="{ name: 'my' }">我的美团</router-link>
+                <router-link :to="{ name: 'my' }">我的</router-link>
                 <dl>
                     <dd>
                         <router-link :to="{ path: '/' }">我的订单</router-link>
                     </dd>
                     <dd>
                         <router-link :to="{ path: '/' }">我的收藏</router-link>
-                    </dd>
-                    <dd>
-                        <router-link :to="{ path: '/' }">抵用券</router-link>
                     </dd>
                     <dd>
                         <router-link :to="{ path: '/' }">账户设置</router-link>
@@ -28,7 +25,7 @@
                         <router-link :to="{ path: '/login' }">登录商家中心</router-link>
                     </dd>
                     <dd>
-                        <router-link :to="{ path: '/' }">美团智能收银</router-link>
+                        <router-link :to="{ path: '/' }">智能收银</router-link>
                     </dd>
                     <dd>
                         <router-link :to="{ path: '/' }">我想合作</router-link>
@@ -48,9 +45,6 @@
                         </dd>
                         <dd>
                             <router-link :to="{ path: '/' }">我的收藏</router-link>
-                        </dd>
-                        <dd>
-                            <router-link :to="{ path: '/' }">抵用券</router-link>
                         </dd>
                         <dd>
                             <router-link :to="{ path: '/' }">账户设置</router-link>
@@ -92,8 +86,8 @@
                             <img
                                 class="appicon"
                                 src="//s0.meituan.net/bs/fe-web-meituan/e5eeaef/img/appicons/meituan.png"
-                                title="美团app"
-                                alt="美团app"
+                                title="app"
+                                alt="app"
                             />
                         </dd>
                     </dl>

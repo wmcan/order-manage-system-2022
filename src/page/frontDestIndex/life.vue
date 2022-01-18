@@ -3,22 +3,22 @@
     <el-row>
       <ul class="nav">
         <li>
-          <router-link to="/" class="takeout">美团外卖</router-link>
+          <router-link to="/" class="takeout">精致美食</router-link>
         </li>
         <li>
-          <router-link to="/" class>猫眼电影</router-link>
+          <router-link to="/" class>特色产品</router-link>
         </li>
         <li>
-          <router-link to="/" class>美团酒店</router-link>
+          <router-link to="/" class>新鲜果蔬</router-link>
         </li>
         <li>
-          <router-link to="/" class="apartment">民宿/公寓</router-link>
+          <router-link to="/" class="apartment">爽口酒水</router-link>
         </li>
         <li>
-          <router-link to="/" class="business">商家入驻</router-link>
+          <router-link to="/" class="business">全城配送</router-link>
         </li>
         <li>
-          <router-link to="/" class>美团公益</router-link>
+          <router-link to="/" class>商家信息</router-link>
         </li>
       </ul>
     </el-row>

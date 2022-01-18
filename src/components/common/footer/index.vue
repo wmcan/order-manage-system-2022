@@ -31,7 +31,7 @@
           <dl>
             <dt>美团服务</dt>
             <dd>
-              <a href="http://waimai.meituan.com/" target="_blank">美团外卖</a>
+              <a href="http://waimai.meituan.com/" target="_blank">美味外卖</a>
             </dd>
             <dd>
               <a href="http://hotel.meituan.com/" target="_blank">美团酒店</a>

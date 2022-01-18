@@ -7,9 +7,10 @@
         切换城市
       </router-link>
       [
-      <a href="#" v-for="(item, index) in nearCity" :key="index">
+      <!-- <a href="#" v-for="(item, index) in nearCity" :key="index">
         {{ item.name }}
-      </a>
+      </a> -->
+      <a href="#">福州</a>
       ]
     </div>
     <div class="m-user">
@@ -32,13 +33,45 @@ export default {
   },
   watch: {
     "$store.state.position": function() {
-      this.nearCity = this.$store.state.position.nearCity;
+      // this.nearCity = this.$store.state.position.nearCity;
+      this.nearCity = {
+        acronym: "fj",
+        firstChar: "f",
+        id: 20,
+        name: "福建",
+        nearCity: [{
+          acronym: "fz",
+          id: 20000,
+          name: "福州",
+          pinyin: "fuzhou",
+          }
+        ],
+        pinyin: "fujian",
+        rank: "F",
+      }
     }
   },
   created() {
     api.getCurPosition().then(res => {
+      // this.$store.dispatch("setPosition", res.data);
       this.$store.dispatch("setPosition", res.data);
-      this.nearCity = res.data.nearCity;
+      let data = {
+        acronym: "fj",
+        firstChar: "f",
+        id: 20,
+        name: "福建",
+        nearCity: [{
+          acronym: "fz",
+          id: 20000,
+          name: "福州",
+          pinyin: "fuzhou",}
+        ],
+        pinyin: "fujian",
+        rank: "F",
+      }
+      this.$store.dispatch("setPosition", data);
+      this.nearCity = data.nearCity;
+      // this.nearCity = res.data.nearCity;
     });
   }
 };
