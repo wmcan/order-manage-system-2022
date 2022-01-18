@@ -28,6 +28,21 @@ export default new Router({
             ]
         },
         {
+          path: '/blank',
+          name: 'blank',
+          component: () => import(/* webpackChunkName: "dashboard" */ '../components/common/layout/blank.vue'),
+          children:[{
+            path:'login',
+            name:'login',
+            component: () => import(/* webpackChunkName: "dashboard" */ '../page/frontDestIndex/login.vue')
+          },
+          {
+            path:'register',
+            name:'register',
+            component: () => import(/* webpackChunkName: "dashboard" */ '../page/frontDestIndex/register.vue')
+          }]
+        },
+        {
             path: '/admin',
             component: () => import(/* webpackChunkName: "home" */ '../components/common/Home.vue'),
             // meta: { title: '自述文件' },

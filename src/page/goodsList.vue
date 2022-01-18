@@ -1,7 +1,7 @@
 <template>
     <div class="page-product">
         <el-row class="m-crumbs">
-            <crumbs />
+            <!-- <crumbs /> -->
         </el-row>
         <el-row>
             <el-col :span="19">

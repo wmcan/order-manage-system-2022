@@ -13,12 +13,8 @@
                 <m-container :nav="iStyle" />
             </el-col>
         </el-row>
-        <el-row>
-            <el-col :span="24">
-                <m-container :nav="recomment" />
-            </el-col>
-        </el-row>
     </div>
+    
 </template>
 
 <script>
@@ -29,49 +25,27 @@ export default {
     data() {
         return {
             iStyle: {
-                class: 'istyle',
-                title: '有格调',
+                class: "istyle",
+                title: "今日推荐",
                 list: [
-                    {
-                        text: '全部',
-                        tab: 'all'
-                    },
-                    {
-                        text: '约会聚餐',
-                        tab: 'food'
-                    },
-                    {
-                        text: '丽人SPA',
-                        tab: 'spa'
-                    },
-                    {
-                        text: '电影演出',
-                        tab: 'movie'
-                    },
-                    {
-                        text: '品质出游',
-                        tab: 'travel'
-                    }
+                {
+                    text: "全部",
+                    tab: "all"
+                },
+                {
+                    text: "主食",
+                    tab: "mainFood"
+                },
+                {
+                    text: "海产",
+                    tab: "seaFood"
+                },
+                {
+                    text: "鲜肉",
+                    tab: "meat"
+                }
                 ]
             },
-            recomment: {
-                class: 'youhui',
-                title: '很优惠',
-                list: [
-                    {
-                        text: '全部',
-                        tab: 'all'
-                    },
-                    {
-                        text: '美食',
-                        tab: 'food'
-                    },
-                    {
-                        text: '休闲',
-                        tab: 'xiuxian'
-                    }
-                ]
-            }
         };
     },
     components: {

@@ -37,6 +37,7 @@
                         <a href="https://github.com/lin-xin/vue-manage-system" target="_blank">
                             <el-dropdown-item>项目仓库</el-dropdown-item>
                         </a>
+                        <el-dropdown-item @click="goFrontDest"><router-link class="login" :to="{ name: 'default' }">前往前台页面</router-link></el-dropdown-item>
                         <el-dropdown-item divided command="loginout">退出登录</el-dropdown-item>
                     </el-dropdown-menu>
                 </el-dropdown>
@@ -100,6 +101,9 @@ export default {
                 }
             }
             this.fullscreen = !this.fullscreen;
+        },
+        goFrontDest(){
+
         }
     },
     mounted() {

@@ -20,7 +20,8 @@
     "vue-schart": "^2.0.0",
     "vuedraggable": "^2.17.0",
     "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",

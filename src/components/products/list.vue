@@ -26,8 +26,29 @@ export default {
   },
   created() {
     api.getProductsList().then(res => {
-      console.log(res.data);
-      this.productList = res.data;
+      // console.log(res.data);
+      // this.productList = res.data;
+      // this.productList = [{
+      //   address: "南岗区中兴大街168号万达广场3层3055",
+      //   avgPrice: 95,
+      //   comment: [{
+      //     evalaute: "好吃",
+      //     username: "xxxx"
+      //   }],
+      //   commentNum: 2555,
+      //   dealItems: [{
+      //     counterPrice: 100,
+      //     price: 28.9,
+      //     priceType: "元",
+      //     saleNum: 3409,
+      //     title: "100元代金券1张"
+      //   }],
+      //     image: "http://p0.meituan.net/msmerchant/b34690f52ebdda221e4153c35878de8c2243192.jpg@275w_156h_1e_1c",
+      //     score: 5,
+      //     tab: ["重庆火锅", "哈西万达"],
+      //     title: "井格重庆火锅（哈西万达店）",
+      //     type: "food",
+      // }]
     });
   },
   data() {
@@ -38,32 +59,67 @@ export default {
         { key: "s-score", name: "人气最高", active: false },
         { key: "s-comment", name: "评价最高", active: false }
       ],
-      productList: [
-        // {
-        //   image:
-        //     "https://p1.meituan.net/msmerchant/9fd94a31ffa1a704902fbbd6e240597769024.jpg@267w_150h_1e_1c",
-        //   title: "火鸡老店",
-        //   type: "type",
-        //   score: 4.1,
-        //   commentNum: 0,
-        //   comment: [
-        //     { username: "xxx", evalaute: "好吃" },
-        //     { username: "xxx", evalaute: "好吃" }
-        //   ],
-        //   tab: ["火锅", "河沙"],
-        //   add: "福建省福州市",
-        //   deal_items: [
-        //     {
-        //       title: "火锅宴，建议10-14人使用",
-        //       price: 909,
-        //       counter_price: 1150,
-        //       saleNum: 0,
-        //       price_type: "元"
-        //     }
-        //   ],
-        //   avg_price: 888
-        // }
-      ]
+      productList: [{
+        address: "南岗区中兴大街168号万达广场3层3055",
+        avgPrice: 95,
+        comment: [{
+          evalaute: "好吃",
+          username: "xxxx"
+        }],
+        commentNum: 2555,
+        dealItems: [{
+          counterPrice: 100,
+          price: 28.9,
+          priceType: "元",
+          saleNum: 3409,
+          title: "100元代金券1张"
+        }],
+          image: "http://p0.meituan.net/msmerchant/b34690f52ebdda221e4153c35878de8c2243192.jpg@275w_156h_1e_1c",
+          score: 5,
+          tab: ["重庆火锅", "哈西万达"],
+          title: "井格重庆火锅（哈西万达店）",
+          type: "food",
+      },{
+        address: "南岗区中兴大街168号万达广场3层3055",
+        avgPrice: 95,
+        comment: [{
+          evalaute: "好吃",
+          username: "xxxx"
+        }],
+        commentNum: 2555,
+        dealItems: [{
+          counterPrice: 100,
+          price: 28.9,
+          priceType: "元",
+          saleNum: 3409,
+          title: "100元代金券1张"
+        }],
+          image: "http://p0.meituan.net/msmerchant/b34690f52ebdda221e4153c35878de8c2243192.jpg@275w_156h_1e_1c",
+          score: 5,
+          tab: ["重庆火锅", "哈西万达"],
+          title: "井格重庆火锅（哈西万达店）",
+          type: "food",
+      },{
+        address: "南岗区中兴大街168号万达广场3层3055",
+        avgPrice: 95,
+        comment: [{
+          evalaute: "好吃",
+          username: "xxxx"
+        }],
+        commentNum: 2555,
+        dealItems: [{
+          counterPrice: 100,
+          price: 28.9,
+          priceType: "元",
+          saleNum: 3409,
+          title: "100元代金券1张"
+        }],
+          image: "http://p0.meituan.net/msmerchant/b34690f52ebdda221e4153c35878de8c2243192.jpg@275w_156h_1e_1c",
+          score: 5,
+          tab: ["重庆火锅", "哈西万达"],
+          title: "井格重庆火锅（哈西万达店）",
+          type: "food",
+      }]
     };
   }
 };

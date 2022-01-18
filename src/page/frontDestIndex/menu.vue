@@ -2,6 +2,7 @@
   <div class="m-menu">
     <dl class="nav" @mouseleave="menuLeave">
       <dt>全部分类</dt>
+      <!-- {{menuList}} -->
       <dd
         v-for="(item, index) in menuList"
         :key="index"
@@ -35,50 +36,70 @@ export default {
     return {
       curDetail: [],
       menuList: [
-        // {
-        //   title: "美食",
-        //   icon: "food",
-        //   children: [
-        //     {
-        //       title: "美食",
-        //       children: [
-        //         "代金券",
-        //         "甜点饮品",
-        //         "火锅自助餐",
-        //         "小吃快餐",
-        //         "日韩料理",
-        //         "西餐"
-        //       ]
-        //     }
-        //   ]
-        // },
-        // {
-        //   title: "外卖",
-        //   icon: "takeout",
-        //   children: [
-        //     {
-        //       title: "外卖",
-        //       children: ["美团外卖"]
-        //     }
-        //   ]
-        // },
-        // {
-        //   title: "酒店",
-        //   icon: "hotel",
-        //   children: [
-        //     {
-        //       title: "酒店",
-        //       children: ["舒适型", "经济型"]
-        //     }
-        //   ]
-        // }
+        {
+          name: "美食",
+          type: "el-icon-fork-spoon",
+          items: [
+            {
+              title: "美食",
+              items: [
+                "火锅自助餐",
+                "小吃快餐",
+                "日韩料理",
+                "西餐"
+              ]
+            }
+          ]
+        },
+        {
+          name: "主食",
+          type: "el-icon-food",
+          items: [
+            {
+              title: "主食",
+              items: ["牛排", "意大利面", "炒面", "炒粉", "八宝饭", "大米饭"]
+            }
+          ]
+        },
+        {
+          name: "生鲜",
+          type: "el-icon-refrigerator",
+          items: [
+            {
+              title: "生鲜",
+              items: ["螃蟹", "黄瓜鱼", "明虾", "小龙虾", "海蛏"]
+            }
+          ]
+        },
+        {
+          name: "凉菜",
+          type: "el-icon-dish",
+          items: [
+            {
+              title: "凉菜",
+              items: ["凉拌豆腐", "小葱拌豆腐", "凉拌西红柿", "凉拌黄瓜", "凉皮"]
+            }
+          ]
+        },
+        {
+          name: "饮料",
+          type: "el-icon-goblet-square-full",
+          items: [
+            {
+              title: "饮料",
+              items: ["橙汁", "苹果汁", "金桔柠檬", "柠檬水", "可乐", "雪碧"]
+            }
+          ]
+        }
       ]
     };
   },
   created(){
     api.getMenuList().then(res => {
       // console.log(res.data)
-      this.menuList = res.data;
+      // this.menuList = res.data;
+      // console.log("this.menuList", this.menuList)
+
     })
   },
   methods: {
