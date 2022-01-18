@@ -2,7 +2,7 @@
     <div class="m-nav">
         <ul class="nav">
             <li class="list my">
-                <router-link :to="{ name: 'my' }">我的</router-link>
+                <router-link :to="{ path: 'my' }">我的</router-link>
                 <dl>
                     <dd>
                         <router-link :to="{ path: '/' }">我的订单</router-link>
@@ -16,10 +16,10 @@
                 </dl>
             </li>
             <li class="list">
-                <router-link :to="{ name: 'my' }">手机APP</router-link>
+                <router-link :to="{ path: '/' }">手机APP</router-link>
             </li>
             <li class="list bd">
-                <router-link :to="{ name: 'my' }">商家中心</router-link>
+                <router-link :to="{ path:  '/' }">商家中心</router-link>
                 <dl>
                     <dd>
                         <router-link :to="{ path: '/login' }">登录商家中心</router-link>
@@ -36,7 +36,7 @@
                 </dl>
             </li>
             <li class="list site">
-                <router-link :to="{ name: 'my' }">网站导航</router-link>
+                <router-link :to="{ path: '/' }">网站导航</router-link>
                 <div class="subContainer">
                     <dl class="hotel">
                         <dt>酒店旅游</dt>
