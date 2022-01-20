@@ -16,9 +16,7 @@
             @blur="blurInput"
             @input="input"
           ></el-input>
-          <el-button type="primary" icon="el-icon-search" @click="goGoods">
-            <!-- <router-link :to="{ name: 'goods'}" style="color: #fff">开始点餐</router-link> -->
-          </el-button>
+          <el-button type="primary" icon="el-icon-search" @click="goGoods"></el-button>
           <!-- <dl class="hotPlace" v-if="isHotPlace">
             <dt>热门搜索</dt>
             <dd v-for="(item, index) in hotPlaceList" :key="index">
@@ -44,11 +42,11 @@
           >
         </p> -->
       </el-col>
-      <el-col :span="6" class="right">
+      <!-- <el-col :span="6" class="right">
         <div class="begin-order">
            <router-link :to="{ name: 'goods'}" style="color: #fff">开始点餐</router-link>
         </div>
-      </el-col>
+      </el-col> -->
     </el-row>
   </div>
 </template>

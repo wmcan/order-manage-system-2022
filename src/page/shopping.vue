@@ -1,6 +1,7 @@
 <template>
     <div>
         购物车
+        结算(num)
     </div>
 </template>
 
