@@ -5,7 +5,7 @@
                 <router-link :to="{ path: 'my' }">我的</router-link>
                 <dl>
                     <dd>
-                        <router-link :to="{ path: '/' }">我的订单</router-link>
+                        <router-link :to="{ path: '/myList' }">我的订单</router-link>
                     </dd>
                     <dd>
                         <router-link :to="{ path: '/' }">我的收藏</router-link>
@@ -19,7 +19,7 @@
                 <router-link :to="{ path: '/' }">手机APP</router-link>
             </li>
             <li class="list bd">
-                <router-link :to="{ path:  '/' }">商家中心</router-link>
+                <router-link :to="{ path: '/' }">商家中心</router-link>
                 <dl>
                     <dd>
                         <router-link :to="{ path: '/login' }">登录商家中心</router-link>

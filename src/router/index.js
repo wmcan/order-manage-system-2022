@@ -24,6 +24,11 @@ export default new Router({
                     path: '/changeCity',
                     name: 'changeCity',
                     component: () => import(/* webpackChunkName: "dashboard" */ '../page/changeCity.vue')
+                },
+                {
+                    path: '/myList',
+                    name: 'myList',
+                    component: () => import('../page/myList.vue')
                 }
             ]
         },
