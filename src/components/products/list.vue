@@ -13,7 +13,15 @@
     </el-row>
     <el-row>
       <item v-for="(item, index) in productList" :key="index" :meta="item" />
+      <div style="width: 30px">
+        <el-pagination
+          background
+          layout="prev, pager, next"
+          :total="1000">
+        </el-pagination>
+      </div>
     </el-row>
+    
   </div>
 </template>
 
@@ -55,9 +63,9 @@ export default {
     return {
       nav: [
         { key: "s-default", name: "智能排序", active: true },
-        { key: "s-price", name: "价格最低", active: false },
-        { key: "s-score", name: "人气最高", active: false },
-        { key: "s-comment", name: "评价最高", active: false }
+        // { key: "s-price", name: "价格最低", active: false },
+        // { key: "s-score", name: "人气最高", active: false },
+        // { key: "s-comment", name: "评价最高", active: false }
       ],
       productList: [{
         address: "南岗区中兴大街168号万达广场3层3055",

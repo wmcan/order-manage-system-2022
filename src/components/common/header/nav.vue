@@ -1,11 +1,17 @@
 <template>
     <div class="m-nav">
         <ul class="nav">
+            <li class="list">
+                <router-link :to="{ path: '/' }">首页</router-link>
+            </li>
             <li class="list my">
-                <router-link :to="{ path: 'my' }">我的</router-link>
+                <router-link :to="{ path: '/' }">我的</router-link>
                 <dl>
                     <dd>
-                        <router-link :to="{ path: '/myList' }">我的订单</router-link>
+                        <router-link :to="{ path: '/shop' }">我的购物车</router-link>
+                    </dd>
+                    <dd>
+                        <router-link :to="{ path: '/order' }">我的订单</router-link>
                     </dd>
                     <dd>
                         <router-link :to="{ path: '/' }">我的收藏</router-link>

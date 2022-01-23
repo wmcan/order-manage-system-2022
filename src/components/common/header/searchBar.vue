@@ -4,7 +4,7 @@
       <el-col :span="3" class="left">
         <img
           src="https://s0.meituan.net/bs/fe-web-meituan/10afbf1/img/logo.png"
-          alt="美团"
+          alt="订餐"
         />
       </el-col>
       <el-col :span="15" class="center">
@@ -16,8 +16,8 @@
             @blur="blurInput"
             @input="input"
           ></el-input>
-          <el-button type="primary" icon="el-icon-search"></el-button>
-          <dl class="hotPlace" v-if="isHotPlace">
+          <el-button type="primary" icon="el-icon-search" @click="goGoods"></el-button>
+          <!-- <dl class="hotPlace" v-if="isHotPlace">
             <dt>热门搜索</dt>
             <dd v-for="(item, index) in hotPlaceList" :key="index">
               <router-link :to="{ name: 'goods', params: { name: item } }">
@@ -31,17 +31,22 @@
                 item
               }}</router-link>
             </dd>
-          </dl>
+          </dl> -->
         </div>
-        <p class="suggest">
+        <!-- <p class="suggest">
           <router-link
             v-for="(item, index) in suggestList"
             :key="item + '~' + index"
             :to="{ name: 'goods', params: { name: item } }"
             >{{ item }}</router-link
           >
-        </p>
+        </p> -->
       </el-col>
+      <!-- <el-col :span="6" class="right">
+        <div class="begin-order">
+           <router-link :to="{ name: 'goods'}" style="color: #fff">开始点餐</router-link>
+        </div>
+      </el-col> -->
     </el-row>
   </div>
 </template>
@@ -89,7 +94,10 @@ export default {
       api.getSearchList().then(res => {
         this.searchList = res.data.list.filter(item => item.indexOf(val) > -1);
       });
-    }
+    },
+    goGoods(){
+      this.$router.push({name:'goods'})
+    },
   }
 };
 </script>
@@ -97,4 +105,25 @@ export default {
 <style lang="scss">
 @import "@/assets/css/public/header/index.scss";
 @import "@/assets/css/public/header/search.scss";
+.right{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .begin-order{
+      width: 55px;
+      height: 26px;
+      line-height: 26px;
+      background: $backgroundColorMT ;
+      cursor: pointer;
+      margin-top: 6px;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      border-radius: 6px;
+    }
+}
+.transparent{
+  background: transparent;
+}
 </style>

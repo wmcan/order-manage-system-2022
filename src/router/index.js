@@ -32,6 +32,25 @@ export default new Router({
                 }
             ]
         },
+        //其他一些页面，包括我的订单，购物，等
+        {
+            path: '/other',
+            name: 'other',
+            component: () => import(/* webpackChunkName: "dashboard" */ '../components/common/layout/other.vue'),
+            redirect: '/frontDestIndex',
+            children: [
+                {
+                    path: '/shop',
+                    name: 'shop',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../page/shopping.vue')
+                },
+                {
+                    path: '/order',
+                    name: 'order',
+                    component: () => import(/* webpackChunkName: "dashboard" */ '../page/order.vue')
+                }
+            ]
+        },
         {
             path: '/blank',
             name: 'blank',

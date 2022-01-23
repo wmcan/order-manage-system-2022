@@ -31,29 +31,29 @@
             v + ( i < meta.tab.length - 1 ? "|" : "")
           }}</span>
         </span>
-        <span class="s-item-addr">{{ meta.address }}</span>
-        <span>
+        <!-- <span class="s-item-addr">{{ meta.address }}</span> -->
+        <!-- <span>
           <a href="#">
             <i class="el-icon-location"></i>
             查看地图
           </a>
-        </span>
+        </span> -->
       </p>
-      <p>
+      <!-- <p>
         <span class="s-item-price"> 人均￥{{ meta.avg_price }} </span>
-      </p>
+      </p> -->
       <ul class="deal-items">
         <li
           class="items"
           v-for="(item, index) in meta.dealItems.slice(0, 2)"
           :key="index"
         >
-          <p class="deal-title">
+          <!-- <p class="deal-title">
             {{ item.title }}
-          </p>
+          </p> -->
           <p>
             <span class="deal-price"> ￥{{ item.price }} </span>
-            <span class="deal-old-price">门市价￥{{ item.counterPrice }}</span>
+            <!-- <span class="deal-old-price">门市价￥{{ item.counterPrice }}</span> -->
             <span class="deal-sales">已售{{ item.saleNum }}</span>
           </p>
         </li>
