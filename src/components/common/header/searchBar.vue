@@ -3,7 +3,7 @@
     <el-row class="m-header-searchbar">
       <el-col :span="3" class="left">
         <img
-          src="https://s0.meituan.net/bs/fe-web-meituan/10afbf1/img/logo.png"
+          src="@/assets/img/logo.png"
           alt="订餐"
         />
       </el-col>
@@ -17,36 +17,21 @@
             @input="input"
           ></el-input>
           <el-button type="primary" icon="el-icon-search" @click="goGoods"></el-button>
-          <!-- <dl class="hotPlace" v-if="isHotPlace">
-            <dt>热门搜索</dt>
-            <dd v-for="(item, index) in hotPlaceList" :key="index">
-              <router-link :to="{ name: 'goods', params: { name: item } }">
-                {{ item }}</router-link
-              >
-            </dd>
-          </dl>
-          <dl class="searchList" v-if="isSearchList">
-            <dd v-for="(item, index) in searchList" :key="index">
-              <router-link :to="{ name: 'goods', params: { name: item } }">{{
-                item
-              }}</router-link>
-            </dd>
-          </dl> -->
         </div>
-        <!-- <p class="suggest">
+        <p class="suggest">
           <router-link
             v-for="(item, index) in suggestList"
             :key="item + '~' + index"
             :to="{ name: 'goods', params: { name: item } }"
             >{{ item }}</router-link
           >
-        </p> -->
+        </p>
       </el-col>
-      <!-- <el-col :span="6" class="right">
+      <el-col :span="6" class="right">
         <div class="begin-order">
            <router-link :to="{ name: 'goods'}" style="color: #fff">开始点餐</router-link>
         </div>
-      </el-col> -->
+      </el-col>
     </el-row>
   </div>
 </template>
