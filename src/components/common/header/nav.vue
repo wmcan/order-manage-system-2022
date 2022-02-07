@@ -25,7 +25,7 @@
                 <router-link :to="{ path: '/' }">手机APP</router-link>
             </li>
             <li class="list bd">
-                <router-link :to="{ path:  '/' }">商家中心</router-link>
+                <router-link :to="{ path: '/' }">商家中心</router-link>
                 <dl>
                     <dd>
                         <router-link :to="{ path: '/login' }">登录商家中心</router-link>
