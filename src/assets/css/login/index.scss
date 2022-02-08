@@ -6,7 +6,7 @@
     margin: 40px auto 30px;
 
     .logo {
-      background: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/logo.6a89007.png) no-repeat;
+      // background: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/logo.6a89007.png) no-repeat;
       background-position: 0 !important;
       background-size: contain !important;
       width: 130px;
@@ -22,6 +22,8 @@
 
     .banner {
       margin-right: 115px;
+      width: 480px;
+      height: 370px;
     }
 
     .form {

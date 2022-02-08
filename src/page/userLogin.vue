@@ -5,12 +5,12 @@
     </div>
     <div class="login-panel">
       <div class="banner">
-        <img
+        <!-- <img
           src="//s0.meituan.net/bs/file/?f=fe-sso-fs:build/page/static/banner/www.jpg"
           width="480"
           height="370"
-          alt="美团网"
-        />
+          alt=""
+        /> -->
       </div>
       <div class="form">
         <h4 v-if="error" class="tips">
@@ -66,14 +66,14 @@
     </div>
     <footer>
       <ul>
-        <li><a href="#">关于美团</a></li>
+        <li><a href="#">关于我们</a></li>
         <li><a href="">加入我们</a></li>
         <li><a href="">商家入驻</a></li>
         <li><a href="">帮助中心</a></li>
-        <li><a href="">美团手机版</a></li>
+        <li><a href="">手机版</a></li>
       </ul>
       <p>
-        ©2018 美团网团购 meituan.com 京ICP证070791号 京公网安备11010502025545号
+        ©2018 dingcan.com 京ICP证070791号 京公网安备11010502025545号
       </p>
     </footer>
   </div>

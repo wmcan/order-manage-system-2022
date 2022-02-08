@@ -4,7 +4,7 @@
       <header>
         <a href="#" class="site-logo"></a>
         <div class="login">
-          <span>已有美团账号?</span>
+          <span>已有账号?</span>
           <router-link :to="{ name: 'login' }">登录</router-link>
         </div>
       </header>
@@ -63,12 +63,12 @@
             <a
               href="https://rules-center.meituan.com/rules-detail/4"
               target="_blank"
-              >《美团用户服务协议》</a
+              >《用户服务协议》</a
             >
             <a
               href="https://rules-center.meituan.com/rules-detail/2"
               target="_blank"
-              >《美团隐私政策》</a
+              >《隐私政策》</a
             >
           </div>
         </el-form-item>
